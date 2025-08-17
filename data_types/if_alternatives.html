@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IF alternatives</title>
+</head>
+<body>
+  <script>
+    // let age = 31;
+    // // ternary operator
+    // let result = age > 18 ? 'Adult' : 'Kid';
+    // console.log(result);
+    
+    //___________________________________________________________________________
+
+    // // Guard operator
+    // let age = 0;
+    // let FinalAge = age || 18;
+    // console.log(age);
+    // console.log(FinalAge);
+
+    //____________________________________________________________________________
+
+    // Default operator
+    let age ;
+    let FinalAge = age ?? 18;
+    console.log(age);
+    console.log(FinalAge);
+    // The only difference b/w guard and default operator is that in default opertaor only null and unidentified values are consider as falsy.
+
+    
+  </script>
+</body>
+</html>

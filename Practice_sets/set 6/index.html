@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>set 6</title>
+  <style>
+    #button {
+      height: 50px;
+      width: 50px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .js-odd{
+      background-color: cadetblue;
+    }
+    .js-even{
+      background-color: burlywood;
+    }
+  </style>
+</head>
+<body>
+
+  <h3 id="greeting"></h3>
+
+  <button id="button" onclick="buttonPressed()"></button>
+
+  <script>
+
+    let noOfTimesClicked = localStorage.getItem('noOfTimesClicked') || 0;
+    function buttonPressed() {
+      noOfTimesClicked++;
+      localStorage.setItem('noOfTimesClicked' , noOfTimesClicked);
+      updateButton();
+    }
+
+    function updateButton (){
+      let button = document.querySelector('#button');
+      button.innerText = noOfTimesClicked; 
+      if (noOfTimesClicked % 2 == 0){
+        button.classList.remove('js-odd');
+        button.classList.add('js-even');
+      } else {
+        button.classList.remove('js-even');
+        button.classList.add('js-odd');
+      }
+    }
+
+    updateButton();
+
+
+             // Display good morning, afternoon, and evening based on the current hour
+
+    // function doGreeting (personName = 'Dear'){
+    //   let date = new Date();
+    //   let hours = date.getHours();
+    //   let heading = document.querySelector('#greeting')
+
+    //   if(hours > 5 && hours < 12){
+    //     heading.innerText = `Good Morning ${personName}`;
+    //   } else if (hours > 12 && hours < 18){
+    //      heading.innerText = `Good Afternoon ${personName}`;
+    //   } else {
+    //     heading.innerText = `Good Night ${personName}`;
+    //   }
+    // }
+     
+    // doGreeting();
+
+    //_____________________________________________________________________________________
+
+         
+  </script>
+</body>
+</html>

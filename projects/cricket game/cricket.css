@@ -1,0 +1,30 @@
+.button {
+  border: none;
+  margin: 10px;
+  background-color: rgb(194, 235, 194);
+  border-radius: 50px;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: rgb(228, 159, 159);
+}
+body {
+  text-align: center;
+}
+#butt {
+  text-align: center;
+  margin : 10px 0 0 0 ;
+  border: 1px black solid;
+}
+.choice-image {
+  height: 75px;
+}
+body {
+  background-image: url(images/blurry_pitch.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+  

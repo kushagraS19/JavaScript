@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Set 8</title>
+  <style>
+    .btn-subscribe {
+      font-size: 16px;
+      height: 30px;
+      width: 90px;
+      background-color: rgb(221, 44, 44);
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    .js-size-double{
+      font-size: 32px;
+      height: 60px;
+      width: 90px;
+    }
+  </style>
+</head>
+<body>
+  <button class="btn-subscribe" onclick="
+    setTimeout(doubleTheSize, 2000)">Subscribe</button>
+  <script>
+
+    // let multiply = (num1 , num2) => num1*num2;
+    // console.log(multiply(4,5));
+
+
+    let arr = [2,3,4,5,6,7,887];
+    let square = arr.map(num => num*num);
+    console.log(square);
+
+
+
+    // function doubleTheSize() {
+    //   let buttonElement = document.querySelector('.btn-subscribe');
+    //   buttonElement.classList.add('.js-size-double');
+    // }
+
+
+    // let arr = [2,3,4,5,6,8,2];
+    // let sum = 0;
+    // arr.forEach(num => sum += num);
+    // console.log(sum);
+
+  </script>
+</body>
+</html>

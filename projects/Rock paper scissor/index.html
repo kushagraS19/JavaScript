@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissor game</title>
+  <style>
+    body {
+      text-align: center;
+    }
+    .Button {
+      border: 1px black solid;
+      padding: 5px;
+      margin: 0 3px 0 3px;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    Rock Paper Scissor Game
+  </h1>
+  <button class="Button" onclick="
+  userChoiceMsg = 'You have chosen Rock';
+  ComputerChoice = generateComputerChoice();
+  let result;
+  result = getResult('Rock' , ComputerChoice);
+    
+   console.log(score);
+  alert(`${userChoiceMsg} , ${computerChoiceMsg}.
+  
+  ${result}
+  
+  Won: ${score.Win}, Lost: ${score.Lost}, Tie: ${score.Tie}`);
+
+  
+  
+  
+  " >Rock</button>
+
+
+  <button class="Button" onclick="
+  userChoiceMsg = 'You have chosen Paper';
+  ComputerChoice = generateComputerChoice();
+  result = getResult('Paper' , ComputerChoice);
+    
+   console.log(score);
+  alert(`${userChoiceMsg} , ${computerChoiceMsg}.
+  
+  ${result}
+  
+  Won: ${score.Win}, Lost: ${score.Lost}, Tie: ${score.Tie}`);
+  
+  
+  ">Paper</button>
+
+
+
+  <button class="Button" onclick="
+  userChoiceMsg = 'You have chosen Scissor';
+  ComputerChoice = generateComputerChoice();
+  result = getResult('Scissor' , ComputerChoice);
+    
+   console.log(score);
+  alert(`${userChoiceMsg} , ${computerChoiceMsg}.
+  
+  ${result}
+  
+  Won: ${score.Win}, Lost: ${score.Lost}, Tie: ${score.Tie}`);
+  
+  
+  
+  
+  ">Scissor</button>
+
+
+  <script>
+    let userChoiceMsg;
+    
+    let computerChoiceMsg;
+    let ComputerChoice;
+
+
+    let score = {
+      Win : 0,
+      Lost : 0,
+      Tie : 0,
+    }
+
+    function generateComputerChoice(){
+      let randomNumber = Math.random() * 3;
+      
+      if (randomNumber > 0 && randomNumber <= 1){
+        computerChoiceMsg = "Computer's choice is Rock";
+        return 'Rock';
+      } 
+      else if (randomNumber > 1 && randomNumber <= 2){
+        computerChoiceMsg = "Computer's choice is Paper";
+        return 'Paper';
+      } 
+      else {
+        computerChoiceMsg = "Computer's choice is Scissor";
+        return 'Scissor';
+      }
+    }
+
+    function getResult(UserMove , ComputerMove){
+      if (UserMove === 'Rock'){
+
+        if (ComputerMove === 'Rock'){
+          score.Tie++;
+          return `It's a tie`;
+        } 
+        else if (ComputerMove === 'Paper'){
+          score.Lost++;
+          return 'Computer won.';
+        } 
+        else {
+          score.Win++;
+          return 'You won.';
+        }
+      }
+
+      if (UserMove === 'Paper'){
+
+      if (ComputerMove === 'Rock'){
+      score.Win++;
+      return 'You won.' ;
+      } 
+      else if (ComputerMove === 'Paper'){
+      score.Tie++;
+      return `It's a tie`;
+      } 
+      else {
+      score.Lost++;
+      return 'Computer won.';
+      }
+      }
+
+
+      if (UserMove === 'Scissor'){
+
+      if (ComputerMove === 'Rock'){
+      score.Lost++;
+      return 'Computer won.' ;
+      } 
+      else if (ComputerMove === 'Paper'){
+      score.Win++;
+      return 'You won.';
+      } 
+      else {
+      score.Tie++;
+      return `It's a tie`;
+      }
+      }
+
+
+
+      }
+      console.log(score);
+  </script>
+</body>
+</html>
