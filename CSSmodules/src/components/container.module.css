@@ -1,0 +1,9 @@
+.container {
+  background-color: khaki;
+  border: 2px solid black;
+  margin: 15px;
+  width: 50%;
+  border-radius: 5px;
+  min-width: 300px;
+  padding: 15px;
+}
