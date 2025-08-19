@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays</title>
+</head>
+<body>
+  <script>
+    let array = [2, 'hehe', 'kushagra' , {likes : 'hehe'}, 7, 6];
+    // console.log(array);
+    // console.log(array[3])
+
+    console.log(Array.isArray(array));//to check if a variable is an array.
+
+    let arr = [1, 2, 4];
+    console.log(arr);
+    arr.push('hehe');//Add an element at the end of an array.
+    console.log(arr);
+    console.log('popped ' + arr.pop() );//Remove the last element of an array.
+    console.log(arr);
+    console.log('popped ' + arr.pop() );
+    console.log(arr);
+
+    arr.unshift('hehe');//Add an element at the beginning of an array.
+    console.log(arr); 
+    arr.shift();// Remove the first element of an array.
+    console.log(arr);
+
+    let num = [2,4,6,7,8,9,89,67,4];
+    console.log(num);
+    num.splice(1, 4)//Add or remove elements of a particular index.
+    console.log(num);
+    
+    let name = ['kushagra ','kanak ','prathmesh ','saloni ','Anish ' ,'loki '];
+    console.log(name);
+    name.sort();
+    console.log(name);
+    console.log(name.toString());
+
+  </script>
+</body>
+</html>

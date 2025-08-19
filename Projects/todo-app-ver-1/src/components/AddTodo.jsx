@@ -1,7 +1,6 @@
-import styles from "./AddTodo.module.css"
+import styles from "./AddTodo.module.css";
 
 function AddTodo(onAdd) {
-  
   return (
     <div className="container-text-center">
       <div className={`${styles.KsRow} row`}>
@@ -12,9 +11,11 @@ function AddTodo(onAdd) {
           <input type="date" />
         </div>
         <div className="col-2">
-          <button type="button" className={`${styles.ksBtn} btn btn-success`} onClick={onAdd
-            
-          }>
+          <button
+            type="button"
+            className={`${styles.ksBtn} btn btn-success`}
+            onClick={onAdd}
+          >
             Add
           </button>
         </div>
